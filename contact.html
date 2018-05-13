@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Contact">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="images/b.ico" />
+	<title>Contact | MODEST</title>
+</head>
+<body id="bgContact">
+	<header>
+		<!--MY NAVIGATION BAR -->
+		<nav style="position: relative;">
+			<div class="nav-wrapper">
+				<a href="#" data-activates="mobileDemo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<a href="index.html" class="brand-logo center">MODEST</a>
+
+				<ul id="contactMenu" class="left hide-on-med-and-down"></ul>
+				<ul id="clothing" class="dropdown-content"></ul>
+				<ul id="shoes" class="dropdown-content"></ul>
+				<ul id="accessories" class="dropdown-content"></ul>
+				
+
+				<ul class="right" id="rightMenu"></ul>
+				<div id="modal1" class="modal"></div>
+				
+				<ul class="side-nav" id="mobileDemo"></ul>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<!-- MY PAGE's BODY -->
+		
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m12 l8 signInContent z-depth-3">
+					<form class="col s12 black-text" name='registration' onSubmit="return formValidation();">  
+						<h5 class="cormorant">Contact Us</h5>
+						<p class="cormorant">We're here to help, 24/7</p>
+						<ul >  
+						
+						<li><label class="black-text" for="username">Name:</label></li>  
+						<li><input class="black-text" type="text" name="username" size="50" /></li>  
+						
+						<li><label class="black-text" for="email">Email:</label></li>  
+						<li><input class="black-text" type="text" name="email" size="50" /></li>
+						
+						<li><label class="black-text" for="desc">Message:</label></li>  
+						<li><textarea class="black-text" name="desc" id="desc"></textarea></li>  
+						<li><input class="black-text" type="submit" name="submit" value="Submit" /></li>  
+						</ul>  
+					</form>  
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="page-footer grayBg">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="footerContent">IT'S All ABOUT THE PERKS</h5>
+					<p class="black-text text-lighten-4 center footerContent">25% OFF + FREE SHIPPING for all new MODEST® UZB costumers.<p/>					
+						<p class="biggerFont footerContent">This site was created to fulfill Web Technologies module’s requirements and does not
+							represent actual company. </p>     			
+						</div>
+						<div class="col l5 offset-l1 s12">
+							<h5 class="black-text footerContent">Our Partners</h5>
+							<ul>
+								<li class="center">
+									<a href="https://www.gq.com/style" target="blank"><img src="images/GQ.png" height="50px"></
+										<a href="https://shop.nordstrom.com/" target="blank"><img src="images/Nordstrom.png" height="50px"></a>
+										<a href="https://www.aliexpress.com/"><img src="images/ALIExp2.png" height="50px"></a>
+										<a href="https://www.amazon.com/" target="blank"><img src="images/Amazon.png" height="50px"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer-copyright">
+						<div class="container">
+							<p class="black-text">© 2018 MODEST CO. - Tashkent, Uzbekistan.
+								<a href="https://telegram.org/"><i class="fa fa-telegram right" aria-hidden="true"></i></a>
+								<a href="https://twitter.com/?lang=ru"><i class="fa fa-twitter right" aria-hidden="true"></i></a>
+								<a href="https://www.instagram.com/?hl=ru"><i class="fa fa-instagram right" aria-hidden="true"></i></a>
+								<a href="https://www.facebook.com/"><i class="fa fa-facebook-official right" aria-hidden="true"></i></a>
+							</p>				
+						</div>
+					</div>
+				</footer>  
+
+				<script type="text/javascript">
+					//this function is used for for validation
+					function formValidation() {  
+
+						//declaring necessary variables  
+						var uname = document.registration.username;  
+
+						//here the value of email inside the registration is assigned to uemail(for future use)
+						var uemail = document.registration.email;  
+						
+						//if uname consists of only letters(calling function) and if uemail is valid(calling function) send the message and inform the user about this
+						if(allLetter(uname)) {  
+							if(ValidateEmail(uemail)) {  
+								alert('Your messsage is send');  
+								window.location.reload()  
+								return true;  
+							}  
+						}  
+						return false;  
+					} 
+
+					//function that checks user name
+					function allLetter(uname)  
+					{   
+						//declaring letters variable and assigning special symbol combinations 
+						var letters = /^[A-Za-z]+$/;  
+
+						//if user name is the same with letters return true, if not inform her about the error
+						if(uname.value.match(letters))  
+						{  
+							return true;  
+						}  
+						else  
+						{  
+							alert('Username must have alphabet characters only');  
+							uname.focus();  
+							return false;  
+						}  
+					}  
+
+					//function that checks user's email
+					function ValidateEmail(uemail)  
+					{  
+						//special symbol combination for valid email structure
+						var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+
+						//if user's email is the same return true, if not return an error
+						if(uemail.value.match(mailformat))  
+						{   
+							return true;  
+						}  
+						else  
+						{  
+							alert("You have entered an invalid email address!");  
+							uemail.focus();  
+							return false;  
+						}  
+					}  
+
+</script>
+
+
+
+	<!--Scripts  -->
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+	<script type="text/javascript" src="js/productPages/contact.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+	
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Branches">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="images/b.ico" />
+	<title>Branches | MODEST</title>
+</head>
+<body id="bgBranches">
+	<header>
+		<!--MY NAVIGATION BAR -->
+		<nav style="position: absolute; background-color: #fff">
+			<div class="nav-wrapper">
+				<a href="#" data-activates="mobileDemo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<a href="index.html" class="brand-logo center">MODEST</a>
+
+				<ul id="branchesMenu" class="left hide-on-med-and-down"></ul>
+				<ul id="clothing" class="dropdown-content"></ul>
+				<ul id="shoes" class="dropdown-content"></ul>
+				<ul id="accessories" class="dropdown-content"></ul>
+				
+
+				<ul class="right" id="rightMenu"></ul>
+				<div id="modal1" class="modal"></div>
+				
+				<ul class="side-nav" id="mobileDemo"></ul>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<!-- MY PAGE's BODY -->
+		
+		<img src="images/br.png" class="responsive-image" width="100%" style="margin-bottom:-7px;" >
+
+		<div class="section grayContent z-depth-5">
+			<div class="row container biggerFont">
+				<h3 class="header cormorand center">New Store Openings</h>
+					<p class="grey-text text-darken-3 lighten-3 cormorant">Is a brand-new MODEST or MODEST TASH coming to a shopping mall near you? Check our list of all stores slated to open from now until 2019.</p> 
+				</div>
+				<button id="show-stores" class="btn waves-effect waves-light showButton" type="submit" name="action">Show New Stores of MODEST</button>
+			</div>
+			
+			<div class="container">
+				<div class="row">
+					<div class="col s12 center  z-depth-3">
+						<table class="responsive striped">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Store</th>
+									<th>Address</th>
+									<th>Phone number</th>
+								</tr>
+							</thead>
+							<tbody id="table-body"></tbody>
+						</table>
+
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="page-footer grayBg">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 s12">
+						<h5 class="footerContent">IT'S All ABOUT THE PERKS</h5>
+						<p class="black-text text-lighten-4 center footerContent">25% OFF + FREE SHIPPING for all new MODEST® UZB costumers.<p/>					
+						<p class="biggerFont footerContent">This site was created to fulfill Web Technologies module’s requirements and does not
+							represent actual company. </p>     			
+						</div>
+						<div class="col l5 offset-l1 s12">
+							<h5 class="black-text footerContent">Our Partners</h5>
+							<ul>
+								<li class="center">
+									<a href="https://www.gq.com/style" target="blank"><img src="images/GQ.png" height="50px"></
+									<a href="https://shop.nordstrom.com/" target="blank"><img src="images/Nordstrom.png" height="50px"></a>
+									<a href="https://www.aliexpress.com/"><img src="images/ALIExp2.png" height="50px"></a>
+									<a href="https://www.amazon.com/" target="blank"><img src="images/Amazon.png" height="50px"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copyright">
+					<div class="container">
+						<p class="black-text">© 2018 MODEST CO. - Tashkent, Uzbekistan.
+						<a href="https://telegram.org/"><i class="fa fa-telegram right" aria-hidden="true"></i></a>
+						<a href="https://twitter.com/?lang=ru"><i class="fa fa-twitter right" aria-hidden="true"></i></a>
+						<a href="https://www.instagram.com/?hl=ru"><i class="fa fa-instagram right" aria-hidden="true"></i></a>
+						<a href="https://www.facebook.com/"><i class="fa fa-facebook-official right" aria-hidden="true"></i></a>
+					</p>				
+				</div>
+			</div>
+		</footer>  
+
+
+
+	<!--Scripts  -->
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+	<script type="text/javascript" src="js/productPages/branches.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+<script type="text/javascript" src="js/productPages/pageEffect.js"></script>
+</body>
+</html>
